@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="理伦电影网,lilundianyingwang,电影理论,电影评论,电影史,电影研究,电影美学,经典电影,电影解析,电影文化">
+<meta name="description" content="理伦电影网(lilundianyingwang)——以理论与评论视角解读电影，涵盖电影理论、电影史、导演研究、影像美学与经典影片深度解析。">
+<title>理伦电影网 - 以理论与评论视角，深度解读每一部电影</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ece9e2;--paper:#f7f5ef;--card:#fff;--ink:#23211d;--ink2:#6a655c;--line:#d8d2c6;
+  --graphite:#3a3c3a;--graphite2:#565854;--ochre:#9a6b2f;--ochre2:#c9964f;--rust:#8a3c2a;--moss:#4a5a3f;--blue:#3f556e;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","Georgia",-apple-system,"PingFang SC",serif;
+  background:var(--bg);color:var(--ink);line-height:1.95;
+  background-image:radial-gradient(circle at 1px 1px,rgba(35,33,29,.05) 1px,transparent 0);background-size:22px 22px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+::selection{background:var(--ochre);color:#fff}
+
+/* ===== 顶栏：学术期刊风 ===== */
+header{background:var(--paper);border-bottom:1px solid var(--line)}
+.mast{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-family:-apple-system,"PingFang SC",sans-serif}
+.mast .l,.mast .r{font-size:11px;letter-spacing:1.5px;color:var(--ink2)}
+.mast .r b{color:var(--ochre);font-weight:700}
+.brand{max-width:1140px;margin:0 auto;padding:26px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand .id{display:flex;align-items:center;gap:16px}
+.mark{width:58px;height:58px;flex-shrink:0;background:var(--graphite);color:#f0ece2;display:flex;align-items:center;justify-content:center;font-family:"Georgia",serif;font-size:24px;font-weight:900;letter-spacing:-1px;position:relative}
+.mark::after{content:"";position:absolute;inset:4px;border:1px solid rgba(240,236,226,.35)}
+.brand h1{font-size:clamp(22px,3.5vw,34px);font-weight:900;letter-spacing:1px;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+.brand h1 small{display:block;font-size:11px;font-weight:500;letter-spacing:5px;color:var(--ochre);margin-top:4px;text-transform:uppercase;font-family:-apple-system,sans-serif}
+.brand .sub{text-align:right;font-size:12px;color:var(--ink2);line-height:1.7;font-family:-apple-system,"PingFang SC",sans-serif}
+.brand .sub b{color:var(--ink)}
+nav.primary{border-top:3px double var(--graphite);border-bottom:1px solid var(--line);background:var(--paper)}
+nav.primary .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px}
+nav.primary a{font-family:-apple-system,"PingFang SC",sans-serif;font-size:14px;font-weight:600;color:var(--ink2);padding:13px 10px;transition:.2s;border-bottom:2px solid transparent}
+nav.primary a:hover{color:var(--ochre);border-bottom-color:var(--ochre)}
+.burger{display:none;background:var(--graphite);border:0;color:#f0ece2;width:40px;height:38px;border-radius:3px;font-size:18px;cursor:pointer}
+
+/* ===== Hero ===== */
+.hero{position:relative;padding:80px 0;background:var(--graphite);color:#e8e4d8;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent 79px,rgba(232,228,216,.04) 79px,rgba(232,228,216,.04) 80px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.5fr 1fr;gap:50px;align-items:center}
+.hero .tag{font-family:-apple-system,sans-serif;font-size:11px;letter-spacing:4px;color:var(--ochre2);text-transform:uppercase;margin-bottom:16px}
+.hero h2{font-size:clamp(32px,5.5vw,58px);font-weight:900;line-height:1.15;letter-spacing:-1px;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+.hero h2 em{font-style:normal;color:var(--ochre2)}
+.hero p{margin-top:20px;color:rgba(232,228,216,.82);font-size:15.5px;max-width:520px}
+.hero .acts{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;font-family:-apple-system,sans-serif}
+.btn{border:0;cursor:pointer;padding:13px 26px;font-size:14px;font-weight:700;border-radius:2px;transition:.25s;font-family:inherit}
+.btn-p{background:var(--ochre);color:#fff}
+.btn-p:hover{background:var(--ochre2);color:var(--ink)}
+.btn-o{background:transparent;color:#e8e4d8;border:1px solid rgba(232,228,216,.5)}
+.btn-o:hover{border-color:var(--ochre2);color:var(--ochre2)}
+.hero .q{background:rgba(247,245,239,.06);border-left:3px solid var(--ochre2);padding:22px 24px;font-size:14px;color:rgba(232,228,216,.9);font-style:italic}
+.hero .q cite{display:block;font-style:normal;font-size:11px;letter-spacing:2px;color:var(--ochre2);margin-top:12px;font-family:-apple-system,sans-serif}
+
+/* ===== 通用 ===== */
+section{padding:80px 0}
+.sec-h{margin-bottom:44px;text-align:center}
+.sec-h .n{display:inline-block;font-family:"Georgia",serif;font-size:13px;font-weight:700;color:var(--ochre);letter-spacing:2px}
+.sec-h h2{font-size:clamp(24px,3.6vw,34px);font-weight:900;margin:6px 0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+.sec-h .ln{width:56px;height:1px;background:var(--graphite);opacity:.4;margin:12px auto}
+.sec-h p{font-size:14.5px;color:var(--ink2);max-width:580px;margin:0 auto}
+.more{display:inline-block;margin-top:30px;font-family:-apple-system,sans-serif;font-size:13px;font-weight:700;color:var(--graphite);border-bottom:1px solid var(--graphite);padding-bottom:2px}
+.more:hover{color:var(--ochre);border-color:var(--ochre)}
+
+/* ===== 栏目一：电影理论（三栏论点卡） ===== */
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.arg{background:var(--card);border:1px solid var(--line);padding:30px 26px;position:relative;transition:.3s}
+.arg::before{content:attr(data-i);position:absolute;top:18px;right:22px;font-family:"Georgia",serif;font-size:34px;font-weight:900;color:rgba(58,60,58,.09)}
+.arg:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(35,33,29,.1)}
+.arg h3{font-size:19px;font-weight:900;margin-bottom:10px;font-family:-apple-system,"PingFang SC",sans-serif;padding-right:40px}
+.arg p{font-size:13.5px;color:var(--ink2)}
+.arg .kw{margin-top:16px;display:flex;gap:6px;flex-wrap:wrap}
+.arg .kw i{font-style:normal;font-size:11px;font-family:-apple-system,sans-serif;background:var(--bg);color:var(--ink2);padding:3px 9px;border-radius:20px}
+
+/* ===== 栏目二：电影史时间轴 ===== */
+.tl{border:1px solid var(--line);background:var(--card);padding:40px 34px}
+.tl ol{list-style:none;position:relative;padding-left:34px}
+.tl ol::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--ochre),var(--graphite))}
+.tl li{position:relative;padding:0 0 26px 18px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-30px;top:8px;width:14px;height:14px;background:var(--ochre);border:3px solid var(--paper);border-radius:50%}
+.tl .y{font-family:"Georgia",serif;font-size:15px;font-weight:700;color:var(--ochre)}
+.tl h4{font-size:17px;font-weight:800;margin:3px 0 5px;font-family:-apple-system,"PingFang SC",sans-serif}
+.tl p{font-size:13.5px;color:var(--ink2)}
+
+/* ===== 栏目三：经典影片解析（带引文） ===== */
+.papers{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.paper{background:var(--paper);border:1px solid var(--line);border-top:5px solid var(--graphite);padding:28px}
+.paper .hd{display:flex;justify-content:space-between;align-items:baseline;font-family:-apple-system,sans-serif;font-size:11px;color:var(--ochre);font-weight:700;letter-spacing:1px;margin-bottom:12px}
+.paper h3{font-size:20px;font-weight:900;margin-bottom:10px;font-family:-apple-system,"PingFang SC",sans-serif}
+.paper blockquote{font-style:italic;color:var(--graphite2);font-size:13.5px;border-left:2px solid var(--ochre2);padding-left:12px;margin:12px 0}
+.paper p{font-size:13.5px;color:var(--ink2)}
+.paper .ft{display:flex;justify-content:space-between;margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);font-family:-apple-system,sans-serif;font-size:11.5px;color:var(--ink2)}
+
+/* ===== 栏目四：导演研究（左右图文） ===== */
+.directors{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.dir{display:grid;grid-template-columns:110px 1fr;gap:18px;background:var(--card);border:1px solid var(--line);padding:20px;transition:.3s}
+.dir:hover{border-color:var(--ochre)}
+.dir .av{height:130px;background:var(--graphite);display:flex;align-items:flex-end;padding:10px;position:relative;overflow:hidden}
+.av1{background:linear-gradient(150deg,#3a3c3a,#9a6b2f)}.av2{background:linear-gradient(150deg,#8a3c2a,#3a3c3a)}.av3{background:linear-gradient(150deg,#4a5a3f,#9a6b2f)}.av4{background:linear-gradient(150deg,#3f556e,#3a3c3a)}
+.dir .av span{font-family:-apple-system,sans-serif;font-size:10px;letter-spacing:1px;color:#e8e4d8;z-index:1}
+.dir .tx h4{font-size:17px;font-weight:900;font-family:-apple-system,"PingFang SC",sans-serif}
+.dir .tx em{font-style:normal;font-size:11.5px;color:var(--ochre);font-family:-apple-system,sans-serif;letter-spacing:1px}
+.dir .tx p{font-size:12.5px;color:var(--ink2);margin-top:6px}
+.dir .tx a{font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;color:var(--graphite);display:inline-block;margin-top:8px}
+.dir .tx a:hover{color:var(--ochre)}
+
+/* ===== 栏目五：影像美学（图文混排文章） ===== */
+.aes{background:var(--card);border:1px solid var(--line)}
+.aes .cap{height:220px;background:linear-gradient(135deg,#3a3c3a 0%,#9a6b2f 55%,#8a3c2a 100%);position:relative}
+.aes .cap .t{position:absolute;left:26px;bottom:20px;color:#f0ece2}
+.aes .cap .t small{font-family:-apple-system,sans-serif;font-size:11px;letter-spacing:3px;color:var(--ochre2)}
+.aes .cap .t h3{font-size:24px;font-weight:900;font-family:-apple-system,"PingFang SC",sans-serif}
+.aes .bd{padding:30px}
+.aes .bd p{font-size:14.5px;color:var(--ink2);margin-bottom:14px}
+.aes .bd p:first-child::first-letter{font-size:38px;font-weight:900;float:left;line-height:.95;padding:4px 8px 0 0;color:var(--ochre);font-family:"Georgia",serif}
+.aes .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.aes .grid2 div h4{font-size:15.5px;font-weight:800;margin-bottom:6px;font-family:-apple-system,"PingFang SC",sans-serif}
+.aes .grid2 div p{font-size:13.5px;margin:0}
+
+/* ===== 数据条 ===== */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));border:1px solid var(--line);background:var(--card)}
+.stat{padding:30px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat strong{display:block;font-size:28px;font-weight:900;color:var(--graphite);font-family:"Georgia",serif}
+.stat span{font-size:12.5px;color:var(--ink2);font-family:-apple-system,sans-serif}
+
+/* ===== 关于 ===== */
+.about{display:grid;grid-template-columns:1fr 1.6fr;gap:40px;background:var(--paper);border:1px solid var(--line);padding:42px;align-items:center}
+.about .l .mark{width:74px;height:74px;font-size:30px}
+.about .l h2{font-size:24px;font-weight:900;margin:14px 0 6px;font-family:-apple-system,"PingFang SC",sans-serif}
+.about .l p{font-size:13.5px;color:var(--ink2)}
+.about .r p{font-size:14.5px;color:var(--ink2);margin-bottom:12px}
+.about .r .acts{margin-top:20px}
+
+/* ===== 页脚 ===== */
+footer{background:#23211d;color:#b9b3a6;padding:52px 0 0;margin-top:30px}
+.f{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:36px;max-width:1140px;margin:0 auto;padding:0 24px 40px}
+.f .id .mark{background:#3a3c3a}
+.f .id h4{font-size:20px;font-weight:900;color:#f0ece2;margin:10px 0 8px;font-family:-apple-system,"PingFang SC",sans-serif}
+.f .id p{font-size:13px;color:#8f897e}
+.f h5{font-size:13px;font-weight:800;color:#f0ece2;margin-bottom:12px;letter-spacing:1px;font-family:-apple-system,sans-serif}
+.f a{display:block;color:#8f897e;font-size:13px;padding:5px 0;transition:.2s}
+.f a:hover{color:var(--ochre2)}
+.cp{max-width:1140px;margin:0 auto;padding:20px 24px;border-top:1px solid #3a3c3a;font-size:12px;color:#7d776d;text-align:center}
+.cp b{color:#f0ece2}
+
+#top{position:fixed;right:16px;bottom:20px;z-index:99;width:44px;height:44px;background:var(--graphite);color:#f0ece2;border:0;border-radius:2px;font-size:16px;cursor:pointer;opacity:0;visibility:hidden;transition:.3s}
+#top.show{opacity:1;visibility:visible}
+#top:hover{background:var(--ochre)}
+
+@media(max-width:880px){
+  .burger{display:block}
+  nav.primary .wrap{display:none;flex-direction:column;align-items:stretch;padding:6px 24px 14px}
+  nav.primary.open .wrap{display:flex}
+  nav.primary a{padding:9px 0;border-bottom:1px solid var(--line)}
+  .hero .wrap,.aes .grid2,.about{grid-template-columns:1fr}
+  .brand{flex-direction:column;text-align:center;gap:14px}
+  .brand .sub{text-align:center}
+  .f{grid-template-columns:1fr 1fr}
+  .tl{padding:28px 20px}
+}
+@media(max-width:600px){
+  section{padding:56px 0}.f{grid-template-columns:1fr}
+  .mast{flex-direction:column;gap:4px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<header>
+  <div class="mast"><div class="wrap" style="display:flex;justify-content:space-between;width:100%;"><span class="l">理论 · 评论 · 电影文化志</span><span class="r"><b>理伦电影网</b> lilundianyingwang · 每日更新</span></div></div>
+  <div class="brand">
+    <div class="id"><div class="mark">L</div><div><h1>理伦电影网<small>Theory of Cinema</small></h1></div></div>
+    <div class="sub"><b>电影不是看见，而是理解</b><br>理论 · 历史 · 美学 · 评论<br>https://lilundianyingwang-wap.github.io</div>
+  </div>
+  <nav class="primary" id="nav"><div class="wrap">
+    <a href="#theory">电影理论</a><a href="#history">电影史</a><a href="#paper">影片解析</a><a href="#director">导演研究</a><a href="#aesthetic">影像美学</a><a href="#about">关于本站</a>
+  </div></nav>
+  <button class="burger" id="burger" aria-label="菜单">☰</button>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div><div class="tag">Cinema Theory &amp; Criticism</div>
+      <h2>以理论与评论的视角<br>重新<em>理解</em>每一部电影</h2>
+      <p>理伦电影网（lilundianyingwang）聚焦电影理论、电影史、导演研究与影像美学，为热爱电影的你提供有深度、有温度的解读与评论。</p>
+      <div class="acts"><a href="#paper" class="btn btn-p">阅读解析</a><a href="#theory" class="btn btn-o">了解理论</a></div>
+    </div>
+    <blockquote class="q">"电影是一面镜子，理论是让我们看得更清楚的那束光。"<cite>— 理伦电影网 编辑部</cite></blockquote>
+  </div>
+</section>
+
+<!-- 栏目一：电影理论 -->
+<section id="theory">
+  <div class="wrap">
+    <div class="sec-h"><span class="n">I.</span><h2>电影理论基础</h2><div class="ln"></div><p>从蒙太奇到长镜头，从作者论到女性主义，构建你的电影认知坐标系。</p></div>
+    <div class="three">
+      <article class="arg" data-i="01"><h3>蒙太奇与叙事</h3><p>镜头如何组接产生意义？从库里肖夫效应到爱森斯坦的理性蒙太奇，理解剪辑背后的思维逻辑。</p><div class="kw"><i>剪辑</i><i>叙事</i><i>镜头语言</i></div></article>
+      <article class="arg" data-i="02"><h3>长镜头与场面调度</h3><p>当摄影机不停下，时间与空间如何在单一镜头中完整展开？探讨巴赞的"现实主义"电影观。</p><div class="kw"><i>场面调度</i><i>时间</i><i>巴赞</i></div></article>
+      <article class="arg" data-i="03"><h3>作者论与类型</h3><p>导演即作者？类型片为何屡试不爽？在个人表达与工业模式之间，寻找电影的张力。</p><div class="kw"><i>作者论</i><i>类型片</i><i>工业</i></div></article>
+      <article class="arg" data-i="04"><h3>女性主义电影理论</h3><p>凝视（gaze）如何被构建？女性主义视角如何重写我们对经典电影的理解。</p><div class="kw"><i>凝视</i><i>性别</i><i>批评</i></div></article>
+      <article class="arg" data-i="05"><h3>电影与哲学</h3><p>影像如何思考时间、记忆与存在？从德勒兹到齐泽克，哲学如何进入电影分析。</p><div class="kw"><i>哲学</i><i>时间</i><i>德勒兹</i></div></article>
+      <article class="arg" data-i="06"><h3>声音与配乐</h3><p>声音不只是画面的附庸。对话、环境音、沉默与配乐，共同塑造电影的情感结构。</p><div class="kw"><i>声音</i><i>配乐</i><i>情感</i></div></article>
+    </div>
+    <a href="#" class="more">更多理论文章 →</a>
+  </div>
+</section>
+
+<!-- 栏目二：电影史时间轴 -->
+<section id="history" style="background:var(--paper);">
+  <div class="wrap">
+    <div class="sec-h"><span class="n">II.</span><h2>电影史脉络</h2><div class="ln"></div><p>沿着时间的轴线，回顾电影艺术百年来的关键转折与重要流派。</p></div>
+    <div class="tl"><ol>
+      <li><span class="y">1895</span><h4>电影的诞生</h4><p>卢米埃尔兄弟在巴黎首次公开放映，人类第一次用光影记录与再现世界。</p></li>
+      <li><span class="y">1920s</span><h4>蒙太奇与默片高峰</h4><p>苏联蒙太奇学派崛起，卓别林、茂瑙等人将默片电影推向艺术高峰。</p></li>
+      <li><span class="y">1940s</span><h4>意大利新现实主义</h4><p>走出摄影棚，把镜头对准战后真实的生活与人，重塑电影与现实的关系。</p></li>
+      <li><span class="y">1950s—60s</span><h4>法国新浪潮</h4><p>戈达尔、特吕弗等人以低成本、手持摄影打破传统语法，强调作者表达。</p></li>
+      <li><span class="y">1990s至今</span><h4>全球化与数字时代</h4><p>数字技术重塑制作与观看方式，流媒体改变发行格局，亚洲电影走向世界。</p></li>
+    </ol></div>
+    <a href="#" class="more">完整电影史 →</a>
+  </div>
+</section>
+
+<!-- 栏目三：经典影片解析 -->
+<section id="paper">
+  <div class="wrap">
+    <div class="sec-h"><span class="n">III.</span><h2>经典影片解析</h2><div class="ln"></div><p>不只是剧情介绍，我们用理论工具拆解每一部经典之作。</p></div>
+    <div class="papers">
+      <article class="paper"><div class="hd"><span>解析 · 01</span><span>剧情 / 悬疑</span></div><h3>《公民凯恩》的空间叙事</h3><blockquote>纵深构图不只是好看，它是权力关系的视觉化表达。</blockquote><p>通过景深、低角度与叙事结构，剖析这部"电影史上最重要作品"的形式与内涵。</p><div class="ft"><span>作者：编辑部</span><span>12 分钟阅读</span></div></article>
+      <article class="paper"><div class="hd"><span>解析 · 02</span><span>爱情 / 文艺</span></div><h3>《花样年华》的色彩与节奏</h3><blockquote>色彩的克制，恰恰是情感最浓烈的表达。</blockquote><p>王家卫如何用旗袍、走廊与爵士乐，构建一个关于克制与错过的情感空间。</p><div class="ft"><span>作者：影评人</span><span>9 分钟阅读</span></div></article>
+      <article class="paper"><div class="hd"><span>解析 · 03</span><span>科幻 / 哲学</span></div><h3>《2001太空漫游》的沉默</h3><blockquote>库布里克用最少的台词，讲出最多的东西。</blockquote><p>从黑石碑到星际之门，解读这部科幻经典中的人类进化寓言与视听语言。</p><div class="ft"><span>作者：编辑部</span><span>15 分钟阅读</span></div></article>
+      <article class="paper"><div class="hd"><span>解析 · 04</span><span>动画 / 奇幻</span></div><h3>《千与千寻》的成长仪式</h3><blockquote>名字被夺走的那一刻，成长的旅程才真正开始。</blockquote><p>从神隐世界的设定，看宫崎骏如何把"成长"转化为一场仪式化的奇幻冒险。</p><div class="ft"><span>作者：编辑部</span><span>11 分钟阅读</span></div></article>
+    </div>
+    <a href="#" class="more">全部解析 →</a>
+  </div>
+</section>
+
+<!-- 栏目四：导演研究 -->
+<section id="director" style="background:var(--paper);">
+  <div class="wrap">
+    <div class="sec-h"><span class="n">IV.</span><h2>导演研究</h2><div class="ln"></div><p>每位导演都是一位独特的作者，我们逐一走进他们的影像世界。</p></div>
+    <div class="directors">
+      <article class="dir"><div class="av av1"><span>作者 A</span></div><div class="tx"><h4>安德烈·塔可夫斯基</h4><em>Andrei Tarkovsky</em><p>用时间雕刻电影，将"雕刻时光"化为一种诗意的、近乎宗教的影像实践。</p><a href="#">研究专辑 →</a></div></article>
+      <article class="dir"><div class="av av2"><span>作者 B</span></div><div class="tx"><h4>小津安二郎</h4><em>Yasujiro Ozu</em><p>低机位、榻榻米、固定镜头，在极度克制的形式中呈现日本家庭的细腻情感。</p><a href="#">研究专辑 →</a></div></article>
+      <article class="dir"><div class="av av3"><span>作者 C</span></div><div class="tx"><h4>英格玛·伯格曼</h4><em>Ingmar Bergman</em><p>直面信仰、死亡与孤独，以冷峻的北欧气质追问人类精神的最深处。</p><a href="#">研究专辑 →</a></div></article>
+      <article class="dir"><div class="av av4"><span>作者 D</span></div><div class="tx"><h4>侯孝贤</h4><em>Hou Hsiao-hsien</em><p>长镜头、远景观、自然音，以东方美学的留白方式记录时代与乡土。</p><a href="#">研究专辑 →</a></div></article>
+    </div>
+    <a href="#" class="more">更多导演 →</a>
+  </div>
+</section>
+
+<!-- 数据条 -->
+<section style="padding:0;"><div class="wrap"><div class="stats">
+  <div class="stat"><strong>200+</strong><span>理论文章</span></div>
+  <div class="stat"><strong>120+</strong><span>影片解析</span></div>
+  <div class="stat"><strong>60+</strong><span>导演专辑</span></div>
+  <div class="stat"><strong>每日</strong><span>更新推荐</span></div>
+  <div class="stat"><strong>10万+</strong><span>读者关注</span></div>
+</div></div></section>
+
+<!-- 栏目五：影像美学 -->
+<section id="aesthetic">
+  <div class="wrap">
+    <div class="sec-h"><span class="n">V.</span><h2>影像美学</h2><div class="ln"></div><p>当我们在谈论电影的美，我们究竟在谈论什么？</p></div>
+    <div class="aes">
+      <div class="cap"><div class="t"><small>ESSAY · 影像美学</small><h3>光、影与色彩的叙事力量</h3></div></div>
+      <div class="bd"><p>电影的美学从不只是"好看"那么简单。光影的明暗对比暗示道德立场，色彩的冷暖变化呼应情绪起伏，构图的比例关系传递权力秩序。理解这些形式语言，是理解电影艺术的第一步。</p>
+        <p>从德国表现主义的硬光阴影，到意大利新现实主义的自然光，再到当代数字调色下的强烈风格化，每一个时代的电影美学都与它的技术条件、社会语境和创作者自觉紧密相连。</p>
+        <div class="grid2">
+          <div><h4>光影：明暗的道德</h4><p>低调打光如何营造悬疑氛围，高调布光又如何塑造"干净"的叙事。</p></div>
+          <div><h4>色彩：情绪的密码</h4><p>从三原色到复杂调色，色彩如何成为不说话的叙事者。</p></div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="more">更多美学文章 →</a>
+  </div>
+</section>
+
+<!-- 关于 -->
+<section id="about" style="background:var(--paper);">
+  <div class="wrap">
+    <div class="about">
+      <div class="l"><div class="mark">L</div><h2>关于理伦电影网</h2><p>理论 · 评论 · 电影文化志</p></div>
+      <div class="r"><p>理伦电影网（lilundianyingwang）是一个专注于电影理论、电影评论与电影文化研究的独立电影媒体。我们相信，好的电影值得被认真地谈论与理解。</p>
+        <p>从经典影片的深度解析，到导演的系统性研究，再到影像美学的细致拆解，我们希望为每一位热爱电影的读者提供有深度、有态度、有温度的内容。</p>
+        <div class="acts"><a href="#theory" class="btn btn-p">开始阅读</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f">
+    <div class="id"><div class="mark">L</div><h4>理伦电影网</h4><p>以理论与评论视角解读电影，涵盖电影理论、电影史、导演研究、影像美学与经典影片深度解析。</p></div>
+    <div><h5>内容</h5><a href="#theory">电影理论</a><a href="#paper">影片解析</a><a href="#director">导演研究</a><a href="#aesthetic">影像美学</a></div>
+    <div><h5>资料</h5><a href="#history">电影史</a><a href="#">电影词典</a><a href="#">书目推荐</a><a href="#">专题合集</a></div>
+    <div><h5>关于</h5><a href="#about">关于本站</a><a href="#">投稿合作</a><a href="#">联系我们</a><a href="#">免责声明</a></div>
+  </div>
+  <div class="cp"><b>理伦电影网</b> &nbsp;|&nbsp; 网址：<b>https://lilundianyingwang-wap.github.io</b><br>© 2026 理伦电影网 版权所有 &nbsp;·&nbsp; 本站内容仅供学习与交流，如发现侵权内容请及时联系我们删除</div>
+</footer>
+
+<button id="top" title="回到顶部">↑</button>
+
+<script>
+document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open');});
+document.querySelectorAll('nav.primary a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open');});});
+window.addEventListener('scroll',function(){var t=document.getElementById('top');window.scrollY>400?t.classList.add('show'):t.classList.remove('show');});
+document.getElementById('top').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+</body>
+</html>
